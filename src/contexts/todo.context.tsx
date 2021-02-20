@@ -12,7 +12,7 @@ interface ITodoContext {
     setTodo: (todo: ITodo) => void;
     deleteTodo: (idx: number) => void;
     updateTodo: (idx:number, option: TODO_UPDATE_OPTION, updatedTask:string) => void;
-    setChuckNorrisHandler: () => void;
+    setChuckNorris: () => void;
 }
 
 const useTodoContext = (): ITodoContext => {
@@ -77,17 +77,17 @@ const useTodoContext = (): ITodoContext => {
 
     /**
      * 
-     * @description Method to fetch Chuck jokes from api dynamically
+     * @description Method to fetch Chuck jokes from api and set in memory of application
      * 
      * @returns { Promise<void> }
      * 
      */
 
-    const setChuckNorrisHandler = async(): Promise<void> => {
+    const setChuckNorris = async(): Promise<void> => {
         try {
             const apiPromise: Promise<any>[] = [];            
 
-            // Array used to call CHUCk_NORRIS_API 3 times
+            // Array used to call CHUCK_NORRIS_API 3 times
             [1, 2, 3].forEach(() => apiPromise.push(fetchChuckNorris()));
             const apiData = await Promise.all(apiPromise)
 
@@ -110,7 +110,7 @@ const useTodoContext = (): ITodoContext => {
         setTodo,
         deleteTodo,
         updateTodo,
-        setChuckNorrisHandler
+        setChuckNorris
     };
 }
 

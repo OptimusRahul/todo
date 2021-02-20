@@ -15,11 +15,6 @@ export interface IConfig {
     };
 }
 
-export interface INewTodo {
-    id: number;
-    task: string;
-}
-
 export interface ITodo {
     id: string;
     task: string;

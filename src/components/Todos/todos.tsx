@@ -10,7 +10,7 @@ import AddIcon from '../UI/AddIcon/addIcon';
 import './todos.scss';
 
 const Todos: FC = (): JSX.Element => {
-    const { loading, todos, setChuckNorrisHandler } = useContainer(TodoContext);
+    const { loading, todos, setChuckNorris } = useContainer(TodoContext);
 
     /**
      * 
@@ -21,10 +21,11 @@ const Todos: FC = (): JSX.Element => {
      */
 
     useEffect(() => {
-        setChuckNorrisHandler();
+        setChuckNorris();
     }, []);
 
     /**
+     * 
      * @description: Conditional rendering element
      * 
      * @returns Loader | AddIcon | Todo List

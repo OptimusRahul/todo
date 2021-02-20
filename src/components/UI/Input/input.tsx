@@ -26,7 +26,9 @@ const Input: FC = (): JSX.Element => {
      * @param e : KeyboardEvent
      * 
      * @description: Check for 'Enter' key to update the new task
+     * 
      */
+    
     const addNewTodoHandler: Function = (e: KeyboardEvent): void => {
         if(e.key === 'Enter') {
             if(newTask && newTask.trim()) {
