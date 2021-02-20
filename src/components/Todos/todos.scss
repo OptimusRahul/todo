@@ -1,0 +1,64 @@
+.todos {
+    display: flex;
+    flex-direction: column;
+}
+
+.todo {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    
+    width: 75%;
+    margin: 10px auto;
+
+    border-radius: 5px;
+    background: #ffffff;
+
+    color: #616161;
+
+    &__body {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+
+        &--idx {
+           margin-left: 10px;
+        }
+
+        &--complete {
+            margin: 10px;
+        }
+
+        &--content {
+            display: block;
+            margin: 2px;
+            width: 90%;
+
+            &__edit {
+                margin: 1rem 0;
+                width: 100%;
+                // width: 50rem;
+                border: none;
+                outline: none;
+
+                font-size: 1rem;
+                
+                border-bottom: 2px solid #000;
+            }
+        }
+    }
+
+    &--controlBtn {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 4rem;
+        
+        & > div > img {
+            cursor: pointer;
+            width: 20px;
+            margin: 0 auto
+        }
+    }
+}

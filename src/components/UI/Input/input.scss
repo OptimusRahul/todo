@@ -1,0 +1,28 @@
+.Input {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    height: 2rem;
+
+    margin: 2rem 0;
+
+    &--box {
+        width: 75%;
+        height: 2.5rem;
+        border: none;
+        outline: none;
+        
+        border-bottom: 3px solid #797876;
+
+        border-radius: 5px;
+        background: #ffffff;
+        box-shadow:  5px 5px 10px #d4d4d4, -5px -5px 10px #ffffff;
+
+        font-family: "Lato", sans-serif;
+
+        &:active, &:focus {
+            border-bottom: 3px solid #1244a0;
+        }
+    }
+}

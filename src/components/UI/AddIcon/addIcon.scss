@@ -1,0 +1,17 @@
+.Empty {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    height: calc(100vh - 2rem - 7.5rem);
+    &--container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__icon {
+            width: 100px;
+            margin: 0 auto;
+        }
+    }
+}
