@@ -21,7 +21,9 @@ const Todos: FC = (): JSX.Element => {
      */
 
     useEffect(() => {
-        setChuckNorris();
+        const callChuckNorris = () => setChuckNorris();
+        callChuckNorris();
+        // eslint-disable-next-line 
     }, []);
 
     /**
