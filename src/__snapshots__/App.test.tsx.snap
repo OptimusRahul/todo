@@ -6,7 +6,7 @@ Array [
      
     <img
       alt="logo"
-      src="logo.svg"
+      src={[Function]}
     />
      
     TODO APP
