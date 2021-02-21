@@ -45,10 +45,11 @@ const Input: FC = (): JSX.Element => {
     }
 
     return (
-        <div className="Input">
+        <div className="Input" data-testid="Input--test">
             <input
                 ref={inputRef}
                 className="Input--box" 
+                data-testid="Input--box__test"
                 placeholder="Please enter todo here" 
                 width="400"
                 height="100"

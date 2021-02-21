@@ -4,25 +4,32 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
+    "@types/jest": "^26.0.20",
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/uuid": "^8.3.0",
     "axios": "^0.21.1",
+    "babel-preset-es2015": "^6.24.1",
     "gh-pages": "^3.1.0",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.2",
+    "react-test-renderer": "^17.0.1",
+    "ts-jest": "^26.5.1",
+    "ts-node": "^9.1.1",
     "typescript": "^4.1.2",
     "unstated-next": "^1.1.0",
     "uuid": "^8.3.2",
     "web-vitals": "^1.0.1",
     "yarn": "^1.22.10"
+  },
+  "devDependencies": {
+    "@types/react-test-renderer": "^17.0.1"
   },
   "scripts": {
     "predeploy": "yarn run build",
@@ -48,6 +55,12 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
     ]
   }
 }

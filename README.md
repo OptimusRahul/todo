@@ -2,6 +2,8 @@
 
 This experimental todo app has been built using React, React Hooks, Typescript, Unstated-Next. 
 
+Demo URL : https://optimusrahul.github.io/todo/
+
 #
 ## App Features
     This todo app has several functionalities
@@ -21,6 +23,13 @@ This experimental todo app has been built using React, React Hooks, Typescript, 
 
 It runs the app in developement mode.
 Open [http://localhost:3000](http://localhost:3000) to view in browser.
+
+#
+
+### App Testing
+    1. Clone the project
+    2. Run 'yarn install' to install all the dependencies of the project
+    3. Run 'yarn run test' to run the test cases.
 
 #
 

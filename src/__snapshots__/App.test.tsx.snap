@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders App 1`] = `
+Array [
+  <header>
+     
+    <img
+      alt="logo"
+      src="logo.svg"
+    />
+     
+    TODO APP
+     
+  </header>,
+  <div
+    className="Input"
+    data-testid="Input--test"
+  >
+    <input
+      className="Input--box"
+      data-testid="Input--box__test"
+      defaultValue=""
+      height="100"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Please enter todo here"
+      width="400"
+    />
+  </div>,
+  <div
+    className="todos"
+  >
+     
+    <div
+      className="loader"
+    >
+       Loading... 
+    </div>
+     
+  </div>,
+]
+`;

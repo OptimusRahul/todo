@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`on input change matches changed value to the state 1`] = `
+<div
+  className="Input"
+  data-testid="Input--test"
+>
+  <input
+    className="Input--box"
+    data-testid="Input--box__test"
+    defaultValue=""
+    height="100"
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeholder="Please enter todo here"
+    width="400"
+  />
+</div>
+`;
