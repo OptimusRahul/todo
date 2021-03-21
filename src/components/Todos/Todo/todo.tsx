@@ -17,7 +17,7 @@ interface IProps {
 }
 
 const Todo: FC<IProps> = ( {idx, todo}: IProps ): JSX.Element => {
-    const [ edit, setEdit ] = useState(false);
+    const [ edit, setEdit ] = useState<Boolean>(false);
     const [ updateTask, setUpdateTask ] = useState<string>('');
     
     const inputRef = useRef<HTMLInputElement>(null);
@@ -37,7 +37,10 @@ const Todo: FC<IProps> = ( {idx, todo}: IProps ): JSX.Element => {
      * 
     */
 
-    const setInputHandler = ():void => setEdit(!edit);
+    const setInputHandler = (task: string):void => {
+        setEdit(!edit);
+        setUpdateTask(task);
+    }
 
     /**
      * 
@@ -47,8 +50,9 @@ const Todo: FC<IProps> = ( {idx, todo}: IProps ): JSX.Element => {
 
 
     const setUpdatedTodo = (idx:number, e: any, option:string):void => {
+
         if(option === 'Button' || (option === 'Keyboard' && e.key === 'Enter')) {
-            setInputHandler();
+            setInputHandler(updateTask);
             if(updateTodo) updateTodo(idx, 'TASK_UPDATE', updateTask);
         } else {
             setUpdateTask(e.target.value);
@@ -120,7 +124,7 @@ const Todo: FC<IProps> = ( {idx, todo}: IProps ): JSX.Element => {
                 <div className="todo--controlBtn__editBtn">
                     {
                         !edit ?
-                            <img src={EditIcon} alt='' onClick={setInputHandler}/> :
+                            <img src={EditIcon} alt='' onClick={() => setInputHandler(task)}/> :
                             <img src={SaveIcon} alt='' onClick={(e) => setUpdatedTodo(idx, e, 'Button')}/>
                     }
                 </div>
@@ -128,7 +132,7 @@ const Todo: FC<IProps> = ( {idx, todo}: IProps ): JSX.Element => {
                     {
                         !edit ? 
                             <img src={TrashIcon} alt='' onClick={() => deleteTodo(idx)}/> :
-                            <img src={CancelIcon} alt='' onClick={setInputHandler}/>
+                            <img src={CancelIcon} alt='' onClick={() => setInputHandler(task)}/>
                     }
                 </div>
             </div>
